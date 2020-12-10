@@ -1,2 +1,5 @@
 /input
-Classification_Results_*
+Classification_Results_TP53
+Classification_Results_CDKN2A
+Classification_Results_PIK3R1
+Classification_Results_GATA3
