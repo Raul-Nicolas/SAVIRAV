@@ -2093,166 +2093,157 @@ Broadcast message from root@ip-172-31-0-250
 
 The system is going down for halt in 960 minutes!
 
-Broadcast message from root@ip-172-31-13:58 ...
+Broadcast message from root@ip-172-31-0-250
+	(unknown) at 19:58 ...
 
-The system is going down for halt in 1320 minutes!
+The system is going down for halt in 960 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 13:58 ...
+	(unknown) at 19:58 ...
 
-The system is going down for halt in 1320 minutes!
-
-Broadcast message from root@ip-172-31-0-250
-	(unknown) at 13:58 ...
-
-The system is going down for halt in 1320 minutes!
-
-Broadcast message from root@ip-172-31-0-250
-	(unknown) at 13:58 ...
-
-The system is going down for halt in 1320 minutes!
+The system is going down for halt in 960 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 13:58 ...
+	(unknown) at 19:58 ...
 
-The system is going down for halt in 1320 minutes!
+The system is going down for halt in 960 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
+	(unknown) at 20:58 ...
 
-The system is going down for halt in 1260 minutes!
+The system is going down for halt in 900 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
+	(unknown) at 20:58 ...
 
-The system is going down for halt in 1260 minutes!
+The system is going down for halt in 900 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
+	(unknown) at 20:58 ...
 
-The system is going down for halt in 1260 minutes!
+The system is going down for halt in 900 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
+	(unknown) at 20:58 ...
 
-The system is going down for halt in 1260 minutes!
+The system is going down for halt in 900 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
+	(unknown) at 20:58 ...
 
-The system is going down for halt in 1260 minutes!
-
-Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
-
-The system is going down for halt in 1260 minutes!
+The system is going down for halt in 900 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 14:58 ...
+	(unknown) at 20:58 ...
 
-The system is going down for halt in 1260 minutes!
+The system is going down for halt in 900 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
+	(unknown) at 21:58 ...
 
-The system is going down for halt in 1200 minutes!
+The system is going down for halt in 840 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
+	(unknown) at 21:58 ...
 
-The system is going down for halt in 1200 minutes!
+The system is going down for halt in 840 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
+	(unknown) at 21:58 ...
 
-The system is going down for halt in 1200 minutes!
+The system is going down for halt in 840 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
+	(unknown) at 21:58 ...
 
-The system is going down for halt in 1200 minutes!
+The system is going down for halt in 840 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
+	(unknown) at 21:58 ...
 
-The system is going down for halt in 1200 minutes!
-
-Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
-
-The system is going down for halt in 1200 minutes!
+The system is going down for halt in 840 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 15:58 ...
+	(unknown) at 21:58 ...
 
-The system is going down for halt in 1200 minutes!
+The system is going down for halt in 840 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
+	(unknown) at 22:58 ...
 
-The system is going down for halt in 1140 minutes!
+The system is going down for halt in 780 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
+	(unknown) at 22:58 ...
 
-The system is going down for halt in 1140 minutes!
+The system is going down for halt in 780 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
+	(unknown) at 22:58 ...
 
-The system is going down for halt in 1140 minutes!
+The system is going down for halt in 780 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
+	(unknown) at 22:58 ...
 
-The system is going down for halt in 1140 minutes!
+The system is going down for halt in 780 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
+	(unknown) at 22:58 ...
 
-The system is going down for halt in 1140 minutes!
-
-Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
-
-The system is going down for halt in 1140 minutes!
+The system is going down for halt in 780 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 16:58 ...
+	(unknown) at 22:58 ...
 
-The system is going down for halt in 1140 minutes!
+The system is going down for halt in 780 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 17:58 ...
+	(unknown) at 23:58 ...
 
-The system is going down for halt in 1080 minutes!
+The system is going down for halt in 720 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 17:58 ...
+	(unknown) at 23:58 ...
 
-The system is going down for halt in 1080 minutes!
+The system is going down for halt in 720 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 17:58 ...
+	(unknown) at 23:58 ...
 
-The system is going down for halt in 1080 minutes!
+The system is going down for halt in 720 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 17:58 ...
+	(unknown) at 23:58 ...
 
-The system is going down for halt in 1080 minutes!
+The system is going down for halt in 720 minutes!
 
 Broadcast message from root@ip-172-31-0-250
-	(unknown) at 17:58 ...
+	(unknown) at 23:58 ...
 
-The system is going down for halt in 1080 minutes!
-
-Broadcast message from root@ip-172-31-0-250
-	(unknown) at 17:58 ...
-
-The system is going down for halt in 1080 minutes!
+The system is going down for halt in 720 minutes!
 
 Broadcast message from root@ip-172-31-0-250
+	(unknown) at 23:58 ...
+
+The system is going down for halt in 720 minutes!
+[K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m $ ./FULL_PIPE.sh -g TP53[K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m $ ./FULL_PIPE.sh -g TP53[K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m $ ./FULL_PIPE.sh -g TP53
+Broadcast message from root@ip-172-31-0-250
+	(unknown) at 4:06 ...
+
+The system is going down for halt in 1440 minutes!
+
+Broadcast message from root@ip-172-31-0-250
+	(unknown) at 4:06 ...
+
+The system is going down for halt in 1440 minutes!
+
+Broadcast message from root@ip-172-31-0-250
+	(unknown) at 4:06 ...
+
+The system is going down for halt in 1440 minutes!
+
+Broadcast message from roo0-250
 	(unknown) at 17:58 ...
 
 The system is going down for halt in 1080 minutes!
