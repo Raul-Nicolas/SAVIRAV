@@ -16,5 +16,5 @@ intronparallel() {
     intron_retention_utils simple_count ${local_INPUTPATH}${SAMPLE}  ${local_OUTPUTPATH}/${SAMPLE}.introncount --genome_id hg38
 }
  export -f intronparallel
- #parallel requires the parameters separated by :::
+#parallel requires the parameters separated by :::
 parallel intronparallel :::: tmp/slicedbamsnames ::: ${INPUTPATH} ::: ${OUTPUTPATH}   

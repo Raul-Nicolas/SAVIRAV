@@ -13,36 +13,28 @@ cigarcleaner <- function(cigarunsplitted){
       cigardf[row, 2] <- cigarspread[cont]
       value = c()
       row = row +1
-      
     } else {
-      
-      
       value =   paste0(value, cigarspread[cont])
     }
   }
   return(cigardf)
 }
+
 coordinateofcigarcalculator <- function(case_of_cigar, case_of_startread){
   whichareN = grep("N", case_of_cigar$class)
   countforcoordinates = c("M", "D", "=", "X", "N")
-  #rows before finding the "N", the splcing
   Start = c()
   End = c()
   for(N in 1:length(whichareN)){
-  beforeandsplicing = case_of_cigar[1:whichareN[N],]
-  Start = c(Start, as.numeric(case_of_startread) + sum(as.numeric(beforeandsplicing[-dim(beforeandsplicing)[1],]$value[beforeandsplicing[-dim(beforeandsplicing)[1],]$class %in% countforcoordinates])))
-  End = c(End, as.numeric(case_of_startread) + sum(as.numeric(beforeandsplicing[-dim(beforeandsplicing)[1],]$value[beforeandsplicing[-dim(beforeandsplicing)[1],]$class %in% countforcoordinates]))
+    beforeandsplicing = case_of_cigar[1:whichareN[N],]
+    Start = c(Start, as.numeric(case_of_startread) + sum(as.numeric(beforeandsplicing[-dim(beforeandsplicing)[1],]$value[beforeandsplicing[-dim(beforeandsplicing)[1],]$class %in% countforcoordinates])))
+    End = c(End, as.numeric(case_of_startread) + sum(as.numeric(beforeandsplicing[-dim(beforeandsplicing)[1],]$value[beforeandsplicing[-dim(beforeandsplicing)[1],]$class %in% countforcoordinates]))
     + as.numeric(beforeandsplicing$value[dim(beforeandsplicing)[1]]))
   }
   return(apply(cbind(Start,End),1,paste0, collapse="-"))
-  return(paste0(c(Start, End),collapse = "-"))
-  
 }
-
-countforcoordinates = c("M", "D", "=", "X")
 errors = c()
 args <- commandArgs(trailingOnly=TRUE)
-#rows with N are rows that contain Splicings
 bamlist = list.files(args[1])
 bamlist = bamlist[grep("bam", bamlist)]
 bamlist = bamlist[grep("bai", bamlist, invert = T)]

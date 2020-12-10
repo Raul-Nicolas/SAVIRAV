@@ -17,14 +17,12 @@ if(getintronlocations){
       intronlocations = unique(c(intronlocations,CDKN2Aintronssample[,2])) 
     }
   }
-  
-  
   intronlocations = paste0("I_",intronlocations)
   write.table(intronlocations , paste0(args[2], "intronlocations"), col.names = F, row.names = F, quote = F)
 } else if (!getintronlocations) {
   intronlocations = read.table(paste0(args[2], "intronlocations"))$V1
+}
 
-  }
 Kintrondatastotal = data.frame(cbind("_", matrix(0, nrow = length(samples), ncol = length(intronlocations))), stringsAsFactors = F)
 Nintrondatastotal = data.frame(cbind("_", matrix(0, nrow = length(samples), ncol = length(intronlocations))), stringsAsFactors = F)
 
@@ -44,32 +42,26 @@ for(cont in 1:length(samples)){
     if(dim(Kintrondata)[2]>1){
       colnames(Kintrondata) = c("Meta_labels", paste0("I_", (dataCDKN2Aintronssample$Boundary_Pos)))
       colnames(Nintrondata) = c("Meta_labels", paste0("I_", (dataCDKN2Aintronssample$Boundary_Pos)))
+      
       cuales = match(colnames(Kintrondatastotal), colnames(Kintrondata))
       cuales = cuales[!is.na(cuales)]
       cualesinthebig = match( colnames(Kintrondata),colnames(Kintrondatastotal))
       cualesinthebig = cualesinthebig[!is.na(cualesinthebig)]
+      
       Kintrondatastotal[cont,cualesinthebig] <- Kintrondata[,cuales]
       Nintrondatastotal[cont,cualesinthebig] <- Nintrondata[,cuales]
     } else { 
       Kintrondatastotal[cont,1] = samples[cont]
       Nintrondatastotal[cont,1] = samples[cont]
-      
-      
     }
-    
   } else {
-    
     Kintrondatastotal[cont,1] = samples[cont]
     Nintrondatastotal[cont,1] = samples[cont]
-    
   }
-  
 }
 
 
-
 Nintrondatastotal$Meta_labels = str_split_fixed(Nintrondatastotal$Meta_labels, "_",2)[,1]
-
 Kintrondatastotal$Meta_labels = str_split_fixed(Kintrondatastotal$Meta_labels, "_",2)[,1]
 
 
