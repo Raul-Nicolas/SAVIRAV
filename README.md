@@ -1,8 +1,8 @@
 # SAVIRAV classifier
-Our classifier uses Splicing and Intron Retention features to predict Splicing-Associated Variants (SAV) and Intron Retention-Associated Variants
+Our classifier uses Splicing and Intron Retention features to predict Splicing-Associated Variants (SAV) and Intron Retention-Associated Variants (IRAV).
 
 ## Input
-This package requires a **BAM file** or **list of BAM files** and the chosen **gene** to proceed with the classification
+This package requires a **BAM file** or **list of BAM files** and the chosen **gene** to proceed with the classification.
 
 Genes available are:
     - TP53
