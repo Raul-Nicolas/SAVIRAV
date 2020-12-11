@@ -2,7 +2,7 @@
 Our classifier uses Splicing and Intron Retention features to predict Splicing-Associated Variants (SAV) and Intron Retention-Associated Variants (IRAV).
 
 ## Input
-This package requires a **text file** providing a **the name of a BAM file** or **list of BAM files** and the chosen **gene** to proceed with the classification.
+This package requires the **bam file folder path** and the chosen **gene** to proceed with the classification.
 
 Genes available are:
 
@@ -12,7 +12,7 @@ Genes available are:
 * GATA3
 
 ````
- FULL_PIPE.sh -g TP53
+ FULL_PIPE.sh  -i inputfolder/ -g TP53
 ````
 
 ## Steps
@@ -23,3 +23,8 @@ Genes available are:
 4. Filtering and formatting of Splicing Junctions
 5. Filtering and formatting of Intron Retentions
 6. Use of Splicing Junctions and Intron Retentions to predict the presence of a Splicing Associated Variant or an Intron Retention Associated Variant
+
+
+## Output
+
+The package provides a table with the *sample ID* and the *motif* it was classified as.
