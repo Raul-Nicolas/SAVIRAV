@@ -27,4 +27,4 @@ Genes available are:
 
 ## Output
 
-The package provides a table with the *sample ID* and the *motif* it was classified as.
+The package provides a table with the **sample ID** and the **motif** it was classified as.
