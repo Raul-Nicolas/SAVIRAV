@@ -2243,7 +2243,28 @@ Loading required package: stats4
 
 Attaching package: ‘S4Vectors’
 
-The following object is masked from �g objects are masked from ‘package:maditr’:
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+To drop variable use NULL: let(mtcars, am = NULL) %>% head()
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:maditr’:
 
     between, coalesce, first, last
 
@@ -2273,7 +2294,29 @@ The following objects are masked from ‘package:base’:
 
 Joining, by = "Meta_labels"
 Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
 Loading required package: methods
 Loading required package: GenomeInfoDb
 Loading required package: BiocGenerics
@@ -2321,49 +2364,18 @@ The following object is masked from ‘package:base’:
     strsplit
 
 
-To aggregate data: take(mtcars, mean_mpg = mean(mpg), by = am)
+Use magrittr pipe '%>%' to chain several operations:
+             mtcars %>%
+                 let(mpg_hp = mpg/hp) %>%
+                 take(mean(mpg_hp), by = am)
+        
 
 
 Attaching package: ‘dplyr’
 
 The following objects are masked from ‘package:maditr’:
 
-    between, coalesce, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Using 'V2' as value column. Use 'value.var' to override
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:data.table’:
-
-    between, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Joining, by = "Meta_labels"
-Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ 
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
-bash: syntax error near unexpected token `('
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ sumscorematrixlpy = sumscorematrix + matrixlpyclassification
-bash: sumscorematrixlpy: command not found
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ classification
-bash: classification: command not found
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ classificationsumscorematrixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclassification[K[Kclassificationsumscorematrixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmatrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[KtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSJthatarefeatures = colnames(trainedresults$alpha)[substring(colnames(trainedresults$alpha),1,3) == "SJ_"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6PtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[K
+ixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmatrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[KtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSJthatarefeatures = colnames(trainedresults$alpha)[substring(colnames(trainedresults$alpha),1,3) == "SJ_"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6PtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[K
 mkdir: cannot create directory ‘output_SJ’: File exists
 mkdir: cannot create directory ‘slicedbam’: File exists
 mkdir: cannot create directory ‘output_intronretention_prepared’: File exists
@@ -3048,160 +3060,6 @@ To drop variable use NULL: let(mtcars, am = NULL) %>% head()
 
 Attaching package: ‘dplyr’
 
-The followi
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Joining, by = "Meta_labels"
-Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
-mkdir: cannot create directory ‘output_SJ’: File exists
-mkdir: cannot create directory ‘slicedbam’: File exists
-mkdir: cannot create directory ‘output_intronretention_prepared’: File exists
-mkdir: cannot create directory ‘metadata’: File exists
-mkdir: cannot create directory ‘output_intronretention’: File exists
-mkdir: cannot create directory ‘tmp’: File exists
-Loading required package: methods
-Loading required package: GenomeInfoDb
-Loading required package: BiocGenerics
-Loading required package: parallel
-
-Attaching package: ‘BiocGenerics’
-
-The following objects are masked from ‘package:parallel’:
-
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
-
-The following objects are masked from ‘package:stats’:
-
-    IQR, mad, sd, var, xtabs
-
-The following objects are masked from ‘package:base’:
-
-    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
-    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
-    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
-
-Loading required package: S4Vectors
-Loading required package: stats4
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
-    expand.grid
-
-Loading required package: IRanges
-Loading required package: GenomicRanges
-Loading required package: Biostrings
-Loading required package: XVector
-
-Attaching package: ‘Biostrings’
-
-The following object is masked from ‘package:base’:
-
-    strsplit
-
-^C
-To select columns from data: take(mtcars, am, vs, mpg)
-
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:maditr’:
-
-    between, coalesce, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Using 'V2' as value column. Use 'value.var' to override
-^[
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:data.table’:
-
-    between, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Joining, by = "Meta_labels"
-^[[AJoining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [A./FULL_PIPE.sh -g TP53
-Loading required package: methods
-Loading required package: GenomeInfoDb
-Loading required package: BiocGenerics
-Loading required package: parallel
-
-Attaching package: ‘BiocGenerics’
-
-The following objects are masked from ‘package:parallel’:
-
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
-
-The following objects are masked from ‘package:stats’:
-
-    IQR, mad, sd, var, xtabs
-
-The following objects are masked from ‘package:base’:
-
-    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
-    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
-    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
-
-Loading required package: S4Vectors
-Loading required package: stats4
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
-    expand.grid
-
-Loading required package: IRanges
-Loading required package: GenomicRanges
-Loading required package: Biostrings
-Loading required package: XVector
-
-Attaching package: ‘Biostrings’
-
-The following object is masked from ‘package:base’:
-
-    strsplit
-
-
-To modify variables or add new variables:
-             let(mtcars, new_var = 42, new_var2 = new_var*hp) %>% head()
-
-
-Attaching package: ‘dplyr’
-
 The following objects are masked from ‘package:maditr’:
 
     between, coalesce, first, last
@@ -3232,72 +3090,9 @@ The following objects are masked from ‘package:base’:
 
 Joining, by = "Meta_labels"
 Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
-Loading required package: methods
-Loading required package: GenomeInfoDb
-Loading required package: BiocGenerics
+Loading required package: foreach
+Loading required package: iterators
 Loading required package: parallel
-
-Attaching package: ‘BiocGenerics’
-
-The following objects are masked from ‘package:parallel’:
-
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
-
-The following objects are masked from ‘package:stats’:
-
-    IQR, mad, sd, var, xtabs
-
-The following objects are masked from ‘package:base’:
-
-    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
-    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
-    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
-
-Loading required package: S4Vectors
-Loading required package: stats4
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
-    expand.grid
-
-Loading required package: IRanges
-Loading required package: GenomicRanges
-Loading required package: Biostrings
-Loading required package: XVector
-
-Attaching package: ‘Biostrings’
-
-The following object is masked from ‘package:base’:
-
-    strsplit
-
-
-To aggregate data: take(mtcars, mean_mpg = mean(mpg), by = am)
-
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:maditr’:
-
-    between, coalesce, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Using 'V2' as value column. Use 'value.var' to override
 
 Attaching package: ‘dplyr’
 
@@ -3305,6 +3100,10 @@ The following objects are masked from ‘package:data.table’:
 
     between, first, last
 
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
 The following objects are masked from ‘package:stats’:
 
     filter, lag
@@ -3313,22 +3112,7 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-Joining, by = "Meta_labels"
-Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ 
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
-bash: syntax error near unexpected token `('
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ sumscorematrixlpy = sumscorematrix + matrixlpyclassification
-bash: sumscorematrixlpy: command not found
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ classification
-bash: classification: command not found
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ classificationsumscorematrixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclassification[K[Kclassificationsumscorematrixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmatrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[KtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSJthatarefeatures = colnames(trainedresults$alpha)[substring(colnames(trainedresults$alpha),1,3) == "SJ_"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6PtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[K
-mkdir: cannot create directory ‘output_SJ’: File exists
-mkdir: cannot create directory ‘slicedbam’: File exists
-mkdir: cannot create directory ‘output_intronretention_prepared’: File exists
-mkdir: cannot create directory ‘metadata’: File exists
-mkdir: cannot create directory ‘output_intronretention’: File exists
-mkdir: cannot create directory ‘tmp’: File exists
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
 Loading required package: methods
 Loading required package: GenomeInfoDb
 Loading required package: BiocGenerics
@@ -3352,19 +3136,6 @@ The following objects are masked from ‘package:base’:
     colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
     grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
     mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
-
-Loading required package: S4Vectors
-Loading required package: stats4
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
-    expand.grid
-
-Loading requipmax, pmax.int, pmin, pmin.int, Position, rank,
     rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
     table, tapply, union, unique, unsplit, which, which.max, which.min
 
@@ -3418,6 +3189,68 @@ The following objects are masked from ‘package:data.table’:
 
     between, first, last
 
+The follarSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+To modify variables or add new variables:
+             let(mtcars, new_var = 42, new_var2 = new_var*hp) %>% head()
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:maditr’:
+
+    between, coalesce, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Using 'V2' as value column. Use 'value.var' to override
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
 The following objects are masked from ‘package:stats’:
 
     filter, lag
@@ -3429,6 +3262,96 @@ The following objects are masked from ‘package:base’:
 Joining, by = "Meta_labels"
 Joining, by = "Meta_labels"
 [01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
+Loading required package: methods
+Loading required package: GenomeInfoDb
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+To aggregate data: take(mtcars, mean_mpg = mean(mpg), by = am)
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:maditr’:
+
+    between, coalesce, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Using 'V2' as value column. Use 'value.var' to override
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Joining, by = "Meta_labels"
+Joining, by = "Meta_labels"
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ 
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
+bash: syntax error near unexpected token `('
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ sumscorematrixlpy = sumscorematrix + matrixlpyclassification
+bash: sumscorematrixlpy: command not found
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ classification
+bash: classification: command not found
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ classificationsumscorematrixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclassification[K[Kclassificationsumscorematrixlpy = sumscorematrix + matrixlpyclassification[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmatrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[KtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSJthatarefeatures = colnames(trainedresults$alpha)[substring(colnames(trainedresults$alpha),1,3) == "SJ_"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6PtableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./FULL_PIPE.sh -g TP53[K
 mkdir: cannot create directory ‘output_SJ’: File exists
 mkdir: cannot create directory ‘slicedbam’: File exists
 mkdir: cannot create directory ‘output_intronretention_prepared’: File exists
@@ -3482,7 +3405,7 @@ The following object is masked from ‘package:base’:
     strsplit
 
 
-To select rows from data: take_if(mtcars, am==0)
+To drop variable use NULL: let(mtcars, am = NULL) %>% head()
 
 
 Attaching package: ‘dplyr’
@@ -3506,6 +3429,101 @@ Attaching package: ‘dplyr’
 The following objects are masked from ‘package:data.table’:
 
     between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Joining, by = "Meta_labels"
+Joining, by = "Meta_labels"
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
+Loading required package: methods
+Loading required package: GenomeInfoDb
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Use magrittr pipe '%>%' to chain several operations:
+             mtcars %>%
+                 let(mpg_hp = mpg/hp) %>%
+                 take(mean(mpg_hp), by = am)
+        
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:maditr’:
+
+    between, coalesce, first, last
+
+The following ob between, first, last
 
 The following objects are masked from ‘package:stats’:
 
@@ -3820,30 +3838,6 @@ Attaching package: ‘S4Vectors’
 
 The following object is masked from ‘package:base’:
 
-    exparApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
-
-The following objects are masked from ‘package:stats’:
-
-    IQR, mad, sd, var, xtabs
-
-The following objects are masked from ‘package:base’:
-
-    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
-    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
-    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
-
-Loading required package: S4Vectors
-Loading required package: stats4
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
     expand.grid
 
 Loading required package: IRanges
@@ -3858,8 +3852,7 @@ The following object is masked from ‘package:base’:
     strsplit
 
 
-To modify variables or add new variables:
-             let(mtcars, new_var = 42, new_var2 = new_var*hp) %>% head()
+To drop variable use NULL: let(mtcars, am = NULL) %>% head()
 
 
 Attaching package: ‘dplyr’
@@ -3894,7 +3887,29 @@ The following objects are masked from ‘package:base’:
 
 Joining, by = "Meta_labels"
 Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
 Loading required package: methods
 Loading required package: GenomeInfoDb
 Loading required package: BiocGenerics
@@ -3942,24 +3957,18 @@ The following object is masked from ‘package:base’:
     strsplit
 
 
-To aggregate data: take(mtcars, mean_mpg = mean(mpg), by = am)
+Use magrittr pipe '%>%' to chain several operations:
+             mtcars %>%
+                 let(mpg_hp = mpg/hp) %>%
+                 take(mean(mpg_hp), by = am)
+        
 
 
 Attaching package: ‘dplyr’
 
 The following objects are masked from ‘package:maditr’:
 
-    between, coalesce, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Using 'V2' as value column. Use 'value.var' to override
+    between, coalesce, first, de
 
 Attaching package: ‘dplyr’
 
@@ -4018,4 +4027,136 @@ The following objects are masked from ‘package:base’:
     table, tapply, union, unique, unsplit, which, which.max, which.min
 
 Loading required package: S4Vectors
-Loading required packag
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+To drop variable use NULL: let(mtcars, am = NULL) %>% head()
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:maditr’:
+
+    between, coalesce, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Using 'V2' as value column. Use 'value.var' to override
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Joining, by = "Meta_labels"
+Joining, by = "Meta_labels"
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
+Loading required package: methods
+Loading required package: GenomeInfoDb
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Use magrittr pipe '%>%' to chain several operations:
+             mtcars %>%
+                 let(mpg_hp = mpg/hp) %>%
+                 take(mean(mpg_hp), by = am)
+        
+
+
+Attaching
