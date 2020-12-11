@@ -2470,12 +2470,23 @@ Loading required package: parallel
 
 Attaching package: ‘dplyr’
 
-The followinutput_SJ’: File exists
-mkdir: cannot create directory ‘slicedbam’: File exists
-mkdir: cannot create directory ‘output_intronretention_prepared’: File exists
-mkdir: cannot create directory ‘metadata’: File exists
-mkdir: cannot create directory ‘output_intronretention’: File exists
-mkdir: cannot create directory ‘tmp’: File exists
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
 Loading required package: methods
 Loading required package: GenomeInfoDb
 Loading required package: BiocGenerics
@@ -2562,43 +2573,29 @@ The following objects are masked from ‘package:base’:
 
 Joining, by = "Meta_labels"
 Joining, by = "Meta_labels"
-[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ ./FULL_PIPE.sh -g TP53
-Loading required package: methods
-Loading required package: GenomeInfoDb
-Loading required package: BiocGenerics
+Loading required package: foreach
+Loading required package: iterators
 Loading required package: parallel
 
-Attaching package: ‘BiocGenerics’
+Attaching package: ‘dplyr’
 
-The following objects are masked from ‘package:parallel’:
+The following objects are masked from ‘package:data.table’:
 
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
+    between, first, last
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
 
 The following objects are masked from ‘package:stats’:
 
-    IQR, mad, sd, var, xtabs
+    filter, lag
 
 The following objects are masked from ‘package:base’:
 
-    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
-    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
-    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
+    intersect, setdiff, setequal, union
 
-Loading required package: S4Vectors
-Loading required package: stats4
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
-    expand.grid
-
-Loading required package: IRanges
+[01;32mraul[00m:[01;34m~/environment/packageclassifier[00m (main) $ [K[01;32mraul[00m:[01;34m~/environment/packagecng required package: IRanges
 Loading required package: GenomicRanges
 Loading required package: Biostrings
 Loading required package: XVector
