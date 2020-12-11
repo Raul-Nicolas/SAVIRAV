@@ -55,6 +55,33 @@ lgammatotalplusalphaplusbeta = lgammatotalplusalphaplusbeta[,,-1]
 lgammaalpha = lgamma(alpha)
 lgammabeta = lgamma(beta)
 
+if(dim(testset)[1]==1){
+scorematrix = c()
+for(motivo in 1:length(motivos)){
+  scorematrix = 
+    rbind(scorematrix,
+          lgammatotalplusone + 
+            lgammakplusalpha[,motivo] + 
+            lgammatotalminuskplusbeta[,motivo] + 
+            rep(lgammaalphaplusbeta[motivo,], each = nrow(totaltestset)) -
+            
+            lgammakplusone - 
+            lgammatotalminuskplusone -
+            lgammatotalplusalphaplusbeta[,motivo] - 
+            rep(lgammaalpha[motivo,], each = nrow(totaltestset)) -
+            rep(lgammabeta[motivo,], each = nrow(totaltestset)) 
+          )
+  
+}
+   
+sumscorematrix = as.matrix(rowSums(scorematrix))
+matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
+sumscorematrixlpy = sumscorematrix + matrixlpy
+
+classification = motivos[which.max(sumscorematrixlpy)]
+
+} else {
+
 scorematrix = matrix(, nrow=dim(testset)[1], ncol=dim(alpha)[2])
 for(motivo in 1:length(motivos)){
   scorematrix = 
@@ -73,11 +100,16 @@ for(motivo in 1:length(motivos)){
           along = 3)
   
 }
-    
+   
 scorematrix= scorematrix[,,-1]
 sumscorematrix = (apply(scorematrix, c(3),rowSums ))
+
+
 matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
 sumscorematrixlpy = sumscorematrix + matrixlpy
 
 classification = motivos[unlist(apply(sumscorematrixlpy, 1, which.max))]
+
+} 
+
 write.table( data.frame(Sample = dataforbetabin$Meta_labels, Classification = classification), paste0("Classification_Results_", args[2]), sep="\t",quote = F , row.names = F )
