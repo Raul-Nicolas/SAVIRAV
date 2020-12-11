@@ -12,7 +12,7 @@ Genes available are:
 * GATA3
 
 ````
-    FULL_PIPE.sh -g TP53
+ FULL_PIPE.sh -g TP53
 ````
 
 ## Steps
