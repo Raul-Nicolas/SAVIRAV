@@ -9,7 +9,7 @@ Genes available are:
 * CDN2KA
 * PIK3R1
 * GATA3
- 
+
     FULL_PIPE.sh -g TP53
 
 ## Steps
