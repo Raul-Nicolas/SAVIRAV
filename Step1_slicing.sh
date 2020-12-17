@@ -26,5 +26,8 @@ do
  then
   samtools view -b ${INPUTPATH}${SAMPLE}.bam "chr10:8054810-8074890" >${OUTPUTPATH}${SAMPLE}_GATA3.bam
   samtools index ${OUTPUTPATH}${SAMPLE}_GATA3.bam
+ else
+  echo ERROR: $GENE is not an allowed gene name. Please check spelling.
+  exit 1 # terminate and indicate error
  fi
 done
