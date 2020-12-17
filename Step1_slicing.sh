@@ -10,7 +10,7 @@ esac
 done
 cat   samplelist | while read SAMPLE
 do 
- if [ “$GENE” == “TP53” ]]
+ if [ “$GENE” == “TP53” ]
  then
   samtools view -b ${INPUTPATH}${SAMPLE}.bam "chr17:7668402-7687538" > ${OUTPUTPATH}${SAMPLE}_TP53.bam
   samtools index ${OUTPUTPATH}${SAMPLE}_TP53.bam

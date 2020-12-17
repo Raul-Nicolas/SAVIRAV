@@ -28,9 +28,9 @@ colnames(tableSJselection) = gsub(":", ".", colnames(tableSJselection))
 colnames(tableSJselection) = gsub("-", ".", colnames(tableSJselection))
 colnames(tableSJselection)[-1] = paste0("SJ_", colnames(tableSJselection)[-1])
 
-load(paste0("Trained_parameters_", args[3], ".RData"))
+load("Trained_parameters.RData")
 
-SJthatarefeatures = colnames(trainedresults$alpha)[substring(colnames(trainedresults$alpha),1,3) == "SJ_"]
+SJthatarefeatures = colnames(trainedresultscompilation[[paste0("alpha_", args[3])]])[substring(colnames(trainedresultscompilation[[paste0("alpha_", args[3])]]),1,3) == "SJ_"]
 tableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)]
 
 
