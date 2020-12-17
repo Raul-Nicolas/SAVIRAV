@@ -9,10 +9,10 @@ library("abind")
 PRcollection = c()
 dataforbetabin = read.table (paste0(args[1],"betabin_intronandSJselection_margins5.txt"), sep  = "\t", check.names = F, stringsAsFactors = F, header = T)
 totalreads =read.table ( paste0(args[1],"betabin_totalintronandSJselection_margins5.txt"), sep  = "\t", check.names = F, stringsAsFactors = F, header = T)
-load(paste0("Trained_parameters_", args[2], ".RData"))
-py=trainedresults$py
-alpha=trainedresults$alpha
-beta=trainedresults$beta
+load("Trained_parameters.RData")
+py=trainedresultscompilation[[paste0("py_", args[2])]]
+alpha=trainedresultscompilation[[paste0("alpha_", args[2])]]
+beta=trainedresultscompilation[[paste0("beta_", args[2])]]
 motivos=rownames(alpha)
 testset=dataforbetabin[,colnames(dataforbetabin) %in% colnames(alpha)]
 totaltestset = totalreads[,colnames(totalreads) %in% colnames(alpha)]
