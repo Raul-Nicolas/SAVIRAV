@@ -61,10 +61,11 @@ for(cont in 1:length(samples)){
 }
 
 
-Nintrondatastotal$Meta_labels = str_split_fixed(Nintrondatastotal$Meta_labels, "_",2)[,1]
-Kintrondatastotal$Meta_labels = str_split_fixed(Kintrondatastotal$Meta_labels, "_",2)[,1]
+#Nintrondatastotal$Meta_labels = str_split_fixed(Nintrondatastotal$Meta_labels, "_",2)[,1]
+#Kintrondatastotal$Meta_labels = str_split_fixed(Kintrondatastotal$Meta_labels, "_",2)[,1]
 
-
+Nintrondatastotal$Meta_labels  = str_split_fixed(Nintrondatastotal$Meta_labels , ".bam", 2)[,1]
+Kintrondatastotal$Meta_labels  = str_split_fixed(Kintrondatastotal$Meta_labels, ".bam", 2)[,1]
 write.table(
   Nintrondatastotal,
   paste0(args[3],"Nintrondatastotal.txt"),
@@ -91,7 +92,7 @@ totalSJselection = fread (paste0(args[3],"TotalSJselection_margins5.txt"), sep  
 SJselection = data.frame(SJselection, check.names = F, stringsAsFactors = F)
 totalSJselection = data.frame(totalSJselection, check.names = F, stringsAsFactors = F)
 
-SJselection$Meta_labels = str_split_fixed(SJselection$labels, "_", 2)[,1]
+SJselection$Meta_labels = SJselection$labels
 totalSJselection$Meta_labels = totalSJselection$labels
 
 betabin_intronandSJselection = inner_join( SJselection, Kintrondatastotal)

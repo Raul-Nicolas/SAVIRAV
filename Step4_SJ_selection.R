@@ -20,10 +20,9 @@ for (cont in 1:length(SJ)) {
 }
 names(fullSJwithlabels)[1] <- "labels"
 
-
+fullSJwithlabels$labels = str_split_fixed(fullSJwithlabels$labels, ".bam", 2)[,1]
 tableSJselection = data.frame(dcast(fullSJwithlabels, labels ~ V1, fill = 0), check.names=F)
 tableSJselection$labels <- str_split_fixed(tableSJselection$labels, "\\.", 4)[, 1]
-tableSJselection$labels <- str_split_fixed(tableSJselection$labels, "_", 2)[, 1]
 colnames(tableSJselection) = gsub(":", ".", colnames(tableSJselection))
 colnames(tableSJselection) = gsub("-", ".", colnames(tableSJselection))
 colnames(tableSJselection)[-1] = paste0("SJ_", colnames(tableSJselection)[-1])
@@ -41,9 +40,6 @@ ends = coords[,2]
 
 tablestartSJselection = tableSJselection
 lab = fullSJwithlabels$labels
-labsplit = str_split_fixed(lab, "_", 2)[,1]
-tablestartSJselection$labels = paste0(tablestartSJselection$labels, "_" , args[3], ".bam.SJ")
-tableSJselection$labels = paste0(tableSJselection$labels, "_", args[3], ".bam.SJ")
 tablestartSJselection[1:dim(tableSJselection)[1], 2:dim(tableSJselection)[2]]<- 0 
 tableendSJselection = tablestartSJselection
 
@@ -75,9 +71,9 @@ tableTotalSJselection[,-1] <- tablestartSJselection[,-1]+ tableendSJselection[,-
 
 namesselectionSJ = colnames(tableTotalSJselection)
 
-tableSJselection$labels = str_split_fixed(tableSJselection$labels, "_",2)[,1]
-tableTotalSJselection$labels = str_split_fixed(tableTotalSJselection$labels, "_",2)[,1]
-
+#tableSJselection$labels = str_split_fixed(tableSJselection$labels, "_",2)[,1]
+#tableTotalSJselection$labels = str_split_fixed(tableTotalSJselection$labels, "_",2)[,1]
+#
 
 write.table(
   tableSJselection,

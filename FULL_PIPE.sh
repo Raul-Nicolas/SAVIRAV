@@ -28,13 +28,13 @@ then
  Rscript ./Step4_SJ_selection.R output_SJ/ tmp/ ${GENE}
  Rscript ./Step5_Intron_preparation.R output_intronretention/ metadata/ tmp/ ${GENE}
  Rscript ./Step6_5motif_betabinomial.R tmp/ ${GENE}
- rm -r slicedbam
- rm -r output_SJ
- rm -r output_intronretention
- rm -r tmp
- rm -r output_intronretention_prepared
- rm -r metadata
- rm samplelist
+ #rm -r slicedbam
+ #rm -r output_SJ
+ #rm -r output_intronretention
+ #rm -r tmp
+ #rm -r output_intronretention_prepared
+ #rm -r metadata
+ #rm samplelist
  else
  echo ERROR: $GENE is not an allowed gene name. Please check spelling.
  exit 1 # terminate and indicate error

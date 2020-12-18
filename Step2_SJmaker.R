@@ -62,7 +62,7 @@ for(Bamsample in 1: length(bamlist)){
       }
       #the warnings are caused by turning a character into a number. I am using it on purpose to separate numbers and characters from cigar
     }
-      write.table( data.frame(table(Global_SJ_coordinates)), paste0(c(args[2],bamlist[Bamsample],".SJ"), collapse = "" ), col.names = F, row.names = F, quote = F)
+      write.table( data.frame(table(Global_SJ_coordinates)), paste0(c(args[2],bamlist[Bamsample]), collapse = "" ), col.names = F, row.names = F, quote = F)
   } else {
   errors = c(errors,Bamsample )
   }
