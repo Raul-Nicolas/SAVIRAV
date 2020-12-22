@@ -13,7 +13,7 @@ if [ ! -d "$INPUTFOLDER" ]; then
  exit 1 # terminate and indicate error
 fi
 
-if [ "$GENE" == 'TP53' ] || [ "$GENE" == 'TP53' ] || [ "$GENE" == 'TP53' ] || [ "$GENE" == 'TP53' ]
+if [ "$GENE" == 'TP53' ] || [ "$GENE" == 'CDKN2A' ] || [ "$GENE" == 'PIK3R1' ] || [ "$GENE" == 'GATA3' ]
 then
  mkdir output_SJ
  mkdir slicedbam

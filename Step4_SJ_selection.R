@@ -22,7 +22,7 @@ names(fullSJwithlabels)[1] <- "labels"
 
 fullSJwithlabels$labels = str_split_fixed(fullSJwithlabels$labels, ".bam", 2)[,1]
 tableSJselection = data.frame(dcast(fullSJwithlabels, labels ~ V1, fill = 0), check.names=F)
-tableSJselection$labels <- str_split_fixed(tableSJselection$labels, "\\.", 4)[, 1]
+tableSJselection$labels <- str_split_fixed(tableSJselection$labels, ".bam", 4)[, 1]
 colnames(tableSJselection) = gsub(":", ".", colnames(tableSJselection))
 colnames(tableSJselection) = gsub("-", ".", colnames(tableSJselection))
 colnames(tableSJselection)[-1] = paste0("SJ_", colnames(tableSJselection)[-1])
