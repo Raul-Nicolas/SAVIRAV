@@ -30,12 +30,14 @@ then
  Rscript ./Step5_Intron_preparation.R output_intronretention/ metadata/ tmp/ ${GENE}
  Rscript ./Step6_5motif_betabinomial.R tmp/ ${GENE}
  Rscript ./Step7_Score_and_plot_classifier.R
+ zip -r Score_plot.zip Score_plot
  rm -r slicedbam
  rm -r output_SJ
  rm -r output_intronretention
  rm -r tmp
  rm -r output_intronretention_prepared
  rm -r metadata
+ rm -r Score_plot
  rm samplelist
  else
  echo ERROR: $GENE is not an allowed gene name. Please check spelling.

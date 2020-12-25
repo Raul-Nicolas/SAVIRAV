@@ -30,7 +30,11 @@ colnames(tableSJselection)[-1] = paste0("SJ_", colnames(tableSJselection)[-1])
 load("Trained_parameters.RData")
 
 SJthatarefeatures = colnames(trainedresultscompilation[[paste0("alpha_", args[3])]])[substring(colnames(trainedresultscompilation[[paste0("alpha_", args[3])]]),1,3) == "SJ_"]
-tableSJselection = tableSJselection[,colnames(tableSJselection) %in% c("labels", SJthatarefeatures)]
+tableSJempty = data.frame(matrix(0, nrow =dim(tableSJselection)[1], ncol = length(SJthatarefeatures) ))
+colnames(tableSJempty) <- SJthatarefeatures
+tableSJempty[match(colnames(tableSJselection)[colnames(tableSJselection) %in%  SJthatarefeatures], colnames(tableSJempty))]<- tableSJselection[,colnames(tableSJselection) %in%  SJthatarefeatures]
+
+tableSJselection = data.frame(labels = tableSJselection$labels, tableSJempty)
 
 
 SJselectednames = colnames(tableSJselection)[-1]
