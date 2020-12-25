@@ -75,9 +75,6 @@ tableTotalSJselection[,-1] <- tablestartSJselection[,-1]+ tableendSJselection[,-
 
 namesselectionSJ = colnames(tableTotalSJselection)
 
-#tableSJselection$labels = str_split_fixed(tableSJselection$labels, "_",2)[,1]
-#tableTotalSJselection$labels = str_split_fixed(tableTotalSJselection$labels, "_",2)[,1]
-#
 
 write.table(
   tableSJselection,
