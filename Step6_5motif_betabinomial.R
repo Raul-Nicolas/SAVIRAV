@@ -78,8 +78,11 @@ sumscorematrix = as.matrix(rowSums(scorematrix))
 matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
 sumscorematrixlpy = sumscorematrix + matrixlpy
 
-classification = motivos[which.max(sumscorematrixlpy)]
 
+results = list(Samples = dataforbetabin$Meta_labels,  Motifs = motivos, Scores_per_motif =  sumscorematrixlpy)
+classification = motivos[which.max(sumscorematrixlpy)]
+Score = sumscorematrixlpy[which.max(sumscorematrixlpy)] - sumscorematrixlpy[ motivos == "WT"]
+save(results, file = "tmp/Result_items_for_score_plot.RData")
 } else {
 
 scorematrix = matrix(, nrow=dim(testset)[1], ncol=dim(alpha)[2])
@@ -107,9 +110,10 @@ sumscorematrix = (apply(scorematrix, c(3),rowSums ))
 
 matrixlpy = t(matrix(rep(lpy, dim(sumscorematrix)[1]), ncol = dim(sumscorematrix)[1], nrow = dim(sumscorematrix)[2]))
 sumscorematrixlpy = sumscorematrix + matrixlpy
-
+results = list(Samples = dataforbetabin$Meta_labels,  Motifs = motivos, Scores_per_motif =  sumscorematrixlpy)
 classification = motivos[unlist(apply(sumscorematrixlpy, 1, which.max))]
-
+Score = sumscorematrixlpy[cbind(1:dim(sumscorematrixlpy)[1],unlist(apply(sumscorematrixlpy, 1, which.max)))]- sumscorematrixlpy[ ,  motivos == "WT"]
+save(results, file = "tmp/Result_items_for_score_plot.RData")
 } 
 
-write.table( data.frame(Sample = dataforbetabin$Meta_labels, Classification = classification), paste0("Classification_Results_", args[2]), sep="\t",quote = F , row.names = F )
+write.table( data.frame(Sample = dataforbetabin$Meta_labels, Classification = classification, Score =Score ), paste0("Classification_Results_", args[2]), sep="\t",quote = F , row.names = F )

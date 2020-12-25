@@ -24,7 +24,7 @@ do
   samtools index ${OUTPUTPATH}/${SAMPLE}.bam
  elif [ “$GENE” == “GATA3”  ]
  then
-  samtools view -b ${INPUTPATH}${SAMPLE}.bam "chr10:8054810-8074890" >${OUTPUTPATH}${SAMPLE}.bam
+  samtools view -b ${INPUTPATH}${SAMPLE}.bam "chr10:8054810-8074890" > ${OUTPUTPATH}${SAMPLE}.bam
   samtools index ${OUTPUTPATH}${SAMPLE}.bam
  fi
 done
