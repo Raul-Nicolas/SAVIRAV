@@ -12,14 +12,14 @@ scores = data.frame(results$Scores_per_motif, check.names = F)
 DiffScores = data.frame(Samples = results$Samples ,Diff =  scores - scores$WT, check.names = F) %>%
  select(-Diff.WT) %>% 
  melt() %>%
- mutate(fill = ifelse(value >=10 , "#d1495b", "#2e4057"))
+ mutate(fill = ifelse(value >=3 , "#d1495b", "#2e4057"))
 
 for(cont in 1:dim(scores)[1]){
  DiffScores %>% 
    filter(Samples == unique(results$Samples)[cont]) %>%
    ggplot(aes(x = reorder(variable,  value), y = value, fill = fill)) + 
    geom_bar(stat="identity", position = position_dodge()) +
-   geom_hline(yintercept = 10,linetype='dotted', col = 'red', size =1)+
+   geom_hline(yintercept = 3,linetype='dotted', col = 'red', size =1)+
    theme_classic() +
    theme(axis.line=element_blank(),
          panel.background = element_rect(fill = "lightgray"),
