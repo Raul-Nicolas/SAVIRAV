@@ -1,11 +1,12 @@
 #!/bin/bash
 #slice bam file
-while getopts g:i: option
+while getopts g:i:t: option
 do
 case "${option}"
 in
 g) GENE=${OPTARG};;
 i) INPUTFOLDER=${OPTARG};;
+t) THRESHOLD=${OPTARG};;
 esac
 done
 if [ ! -d "$INPUTFOLDER" ]; then
@@ -29,7 +30,7 @@ then
  Rscript ./Step4_SJ_selection.R output_SJ/ tmp/ ${GENE}
  Rscript ./Step5_Intron_preparation.R output_intronretention/ metadata/ tmp/ ${GENE}
  Rscript ./Step6_5motif_betabinomial.R tmp/ ${GENE}
- Rscript ./Step7_Score_and_plot_classifier.R
+ Rscript ./Step7_Score_and_plot_classifier.R ${THRESHOLD}
  zip -r Score_plot.zip Score_plot
  rm -r slicedbam
  rm -r output_SJ
